@@ -41,7 +41,7 @@ describe Stud::Temporary do
       it "should clean up after the block closes" do
         path = ""
         file { |fd| path = fd.path }
-        reject { File }.exists?(path)
+        reject { File }.exist?(path)
       end
     end # with a block
   end # #file
